@@ -39,6 +39,26 @@ header p {
   margin-top: 10px;
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* ruimte tussen foto en tekst */
+  margin-top: 20px;
+}
+
+.profile-photo {
+  width: 150px; /* grootte van de foto */
+  height: 150px;
+  border-radius: 50%; /* maakt hem rond */
+  object-fit: cover; /* behoudt aspect ratio */
+  border: 2px solid #333; /* optionele rand */
+}
+
+.about-text {
+  flex: 1; /* tekst neemt resterende ruimte in */
+}
+
+  
 /* Sections */
 section {
   padding: 50px 20px;
