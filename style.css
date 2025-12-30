@@ -100,3 +100,18 @@ footer {
 .video {
   margin-bottom: 30px;
 }
+
+/* Contact links styling */
+#contact .contact-link {
+  font-size: 0.9em;      /* Maakt tekst iets kleiner dan normaal */
+  margin-bottom: 10px;   /* Ruimte tussen mail en Instagram */
+}
+
+#contact .contact-link a {
+  color: #0077cc;        /* Klassiek blauw → herkenbaar als link */
+  text-decoration: underline; /* Onderlijning = duidelijk klikbaar */
+}
+
+#contact .contact-link a:hover {
+  color: #004a99;        /* Donkerder blauw bij hover */
+}
