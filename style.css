@@ -23,10 +23,18 @@ body {
 }
 
 /* Header sectie */
-header {
-  background-color: var(--hardcourt-blue);
-  color: #fff;
-  padding: 60px 20px;
+ header {
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    #FFD100 33%,
+    #EF3340 66%,
+    #007FFF 66%,
+    #CE1021 83%,
+    #F7D116 100%
+  );
+  color: white;
+  padding: 70px 20px;
   text-align: center;
 }
 
