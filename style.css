@@ -59,6 +59,14 @@ header p {
   margin: 0 auto;           /* center op de pagina of in container */
 }
 
+.profile-photo {
+  width: 150px; /* grootte van de foto */
+  height: 150px;
+  border-radius: 50%; /* maakt hem rond */
+  object-fit: cover; /* behoudt aspect ratio */
+  border: 2px solid #333; /* optionele rand */
+}
+
 .about-container {
   display: flex;
   align-items: center;
@@ -81,12 +89,21 @@ header p {
   text-decoration: underline;
 }
 
-.profile-photo {
-  width: 150px; /* grootte van de foto */
-  height: 150px;
-  border-radius: 50%; /* maakt hem rond */
-  object-fit: cover; /* behoudt aspect ratio */
-  border: 2px solid #333; /* optionele rand */
+.social-links p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #000; /* zwarte tekst naast icon */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* ruimte tussen icoon en tekst */
+}
+
+.social-links a:hover {
+  text-decoration: underline;
 }
 
 .about-text {
