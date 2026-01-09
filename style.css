@@ -66,6 +66,21 @@ header p {
   margin-top: 20px;
 }
 
+.youtube-link {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #FF0000; /* YouTube rood */
+}
+
+.youtube-link a {
+  text-decoration: none;
+  color: #FF0000;
+}
+
+.youtube-link a:hover {
+  text-decoration: underline;
+}
+
 .profile-photo {
   width: 150px; /* grootte van de foto */
   height: 150px;
