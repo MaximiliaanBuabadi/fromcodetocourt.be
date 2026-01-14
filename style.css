@@ -53,7 +53,7 @@ header p {
   height: 200px;            /* gewenste hoogte */
   border-radius: 50%;       /* rond gezicht */
   object-fit: cover;        /* vult het vak, geen vervorming */
-  object-position: center -25%;  /* centreert je hoofd in het vak */
+  object-position: center -35%;  /* centreert je hoofd in het vak */
   border: 3px solid #333;   /* optionele rand */
   display: block;
   margin: 0 auto;           /* center op de pagina of in container */
