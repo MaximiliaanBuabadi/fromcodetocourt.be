@@ -59,14 +59,6 @@ header p {
   margin: 0 auto;           /* center op de pagina of in container */
 }
 
-.profile-photo {
-  width: 150px; /* grootte van de foto */
-  height: 150px;
-  border-radius: 50%; /* maakt hem rond */
-  object-fit: cover; /* behoudt aspect ratio */
-  border: 2px solid #333; /* optionele rand */
-}
-
 .about-container {
   display: flex;
   align-items: center;
