@@ -1,4 +1,6 @@
-/* CSS Reset */
+/* ===============================
+   CSS Reset
+   =============================== */
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +13,11 @@
 :root {
   --hardcourt-blue: #1e4fd7;
   --gravel-orange: #e67e22;
-}  
+}
 
-/* Algemene body styling */
+/* ===============================
+   Algemene body styling
+   =============================== */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -22,8 +26,10 @@ body {
   color: #222;
 }
 
-/* Header sectie */
- header {
+/* ===============================
+   Header sectie
+   =============================== */
+header {
   background: linear-gradient(
     90deg,
     #000000 0%,
@@ -48,28 +54,36 @@ header p {
   margin-top: 10px;
 }
 
-.profile-photo {
-  width: 200px;             /* gewenste breedte */
-  height: 200px;            /* gewenste hoogte */
-  border-radius: 50%;       /* rond gezicht */
-  object-fit: cover;        /* vult het vak, geen vervorming */
-  object-position: center ;  /* centreert je hoofd in het vak */
-  border: 3px solid #333;   /* optionele rand */
-  display: block;
-  margin: 0 auto;           /* center op de pagina of in container */
-}
-
+/* ===============================
+   About-sectie
+   =============================== */
 .about-container {
   display: flex;
-  align-items: center;
-  gap: 20px; /* ruimte tussen foto en tekst */
+  align-items: center;   /* foto en tekst verticaal gecentreerd */
+  gap: 20px;             /* ruimte tussen foto en tekst */
   margin-top: 20px;
 }
 
+.profile-photo {
+  width: 200px;                  /* desktop grootte */
+  height: 200px;
+  border-radius: 50%;            /* rond gezicht */
+  object-fit: cover;             /* vult het vak zonder vervorming */
+  object-position: center center;/* hoofd mooi gecentreerd */
+  border: 3px solid #333;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1;                       /* tekst neemt resterende ruimte in */
+}
+
+/* YouTube & Social links */
 .youtube-link {
   margin-top: 10px;
   font-weight: bold;
-  color: #FF0000; /* YouTube rood */
+  color: #FF0000;
 }
 
 .youtube-link a {
@@ -88,22 +102,19 @@ header p {
 
 .social-links a {
   text-decoration: none;
-  color: #000; /* zwarte tekst naast icon */
+  color: #000;
   display: inline-flex;
   align-items: center;
-  gap: 6px; /* ruimte tussen icoon en tekst */
+  gap: 6px;
 }
 
 .social-links a:hover {
   text-decoration: underline;
 }
 
-.about-text {
-  flex: 1; /* tekst neemt resterende ruimte in */
-}
-
-  
-/* Sections */
+/* ===============================
+   Sections
+   =============================== */
 section {
   padding: 50px 20px;
   max-width: 900px;
@@ -121,7 +132,9 @@ a {
   text-decoration: none;
 }
 
-/* Footer */
+/* ===============================
+   Footer
+   =============================== */
 footer {
   text-align: center;
   padding: 20px;
@@ -129,22 +142,43 @@ footer {
   color: #fff;
 }
 
-/* Video styling */
+/* ===============================
+   Video styling
+   =============================== */
 .video {
   margin-bottom: 30px;
 }
 
-/* Contact links styling */
+/* ===============================
+   Contact links styling
+   =============================== */
 #contact .contact-link {
-  font-size: 0.9em;      /* Maakt tekst iets kleiner dan normaal */
-  margin-bottom: 10px;   /* Ruimte tussen mail en Instagram */
+  font-size: 0.9em;
+  margin-bottom: 10px;
 }
 
 #contact .contact-link a {
-  color: #0077cc;        /* Klassiek blauw → herkenbaar als link */
-  text-decoration: underline; /* Onderlijning = duidelijk klikbaar */
+  color: #0077cc;
+  text-decoration: underline;
 }
 
 #contact .contact-link a:hover {
-  color: #004a99;        /* Donkerder blauw bij hover */
+  color: #004a99;
+}
+
+/* ===============================
+   Mobiel / Responsive
+   =============================== */
+@media (max-width: 600px) {
+  .about-container {
+    flex-direction: column; /* foto boven tekst */
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    object-position: center center; /* hoofd ook op mobiel gecentreerd */
+  }
 }
