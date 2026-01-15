@@ -14,118 +14,20 @@ body {
   padding: 0 20px;
 }
 
-/* ---------- Header (oude banner met geïntegreerde kleuren) ---------- */
+/* ---------- Header met België/Congo kleuren ---------- */
 header {
   text-align: center;
   padding: 30px 0;
 
-  /* Oude banner met rood-zwart-geel kleuren verweven */
-  background: linear-gradient(135deg, #ff0000, #000000, #ffdd00);
-  
-  color: white;
-  border-bottom: 2px solid #333333;
-}
+  /* Oude banner kleuren: rood → zwart → geel */
+  background: linear-gradient(
+    90deg, 
+    #ff0000 0%, 
+    #ff0000 33%, 
+    #000000 34%, 
+    #000000 66%, 
+    #ffdd00 67%, 
+    #ffdd00 100%
+  );
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 5px;
-}
-
-header p {
-  font-size: 1rem;
-  color: #f0f8ff;
-}
-
-/* ---------- About Section ---------- */
-#about {
-  margin: 40px 0;
-}
-
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile-photo {
-  max-width: 200px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-}
-
-.about-text {
-  flex: 1;
-}
-
-.youtube-link a {
-  color: #e91e63;
-  text-decoration: none;
-}
-
-.youtube-link a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Video Sections ---------- */
-#latest-video .video,
-#latest-short .video,
-#teaser-video .video {
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-/* ---------- Shorts Visueel Accent ---------- */
-#latest-short {
-  background-color: #f9f9f9; /* lichte achtergrond */
-  padding: 15px;
-  border-radius: 10px;
-}
-
-#latest-short .video {
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-#latest-short .video:hover {
-  transform: scale(1.02);
-}
-
-/* ---------- Contact Section ---------- */
-#contact {
-  margin: 50px 0;
-  text-align: center;
-}
-
-.contact-link a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.contact-link a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Footer ---------- */
-footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #f2f2f2;
-  border-top: 2px solid #ddd;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-photo {
-    max-width: 150px;
-  }
-}
+  color: white; /* tekst zichtba*
