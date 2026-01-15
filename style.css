@@ -1,184 +1,122 @@
-/* ===============================
-   CSS Reset
-   =============================== */
+/* ---------- Algemene Reset ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* ===============================
-   Kleurvariabelen (branding)
-   =============================== */
-:root {
-  --hardcourt-blue: #1e4fd7;
-  --gravel-orange: #e67e22;
-}
-
-/* ===============================
-   Algemene body styling
-   =============================== */
+/* ---------- Body ---------- */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #222;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 0 20px;
 }
 
-/* ===============================
-   Header sectie
-   =============================== */
+/* ---------- Header ---------- */
 header {
-  background: linear-gradient(
-    90deg,
-    #000000 0%,
-    #FFD100 33%,
-    #EF3340 66%,
-    #007FFF 66%,
-    #CE1021 83%,
-    #F7D116 100%
-  );
-  color: white;
-  padding: 70px 20px;
   text-align: center;
+  padding: 30px 0;
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ddd;
 }
 
 header h1 {
-  font-size: 3em;
-  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
 }
 
 header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
 }
 
-/* ===============================
-   About-sectie
-   =============================== */
+/* ---------- About Section ---------- */
+#about {
+  margin: 40px 0;
+}
+
 .about-container {
   display: flex;
-  align-items: center;   /* foto en tekst verticaal gecentreerd */
-  gap: 20px;             /* ruimte tussen foto en tekst */
-  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
 }
 
 .profile-photo {
-  width: 200px;                  /* desktop grootte */
-  height: 200px;
-  border-radius: 50%;            /* rond gezicht */
-  object-fit: cover;             /* vult het vak zonder vervorming */
-  object-position: center center;/* hoofd mooi gecentreerd */
-  border: 3px solid #333;
-  display: block;
-  margin: 0 auto;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
 }
 
 .about-text {
-  flex: 1;                       /* tekst neemt resterende ruimte in */
-}
-
-/* YouTube & Social links */
-.youtube-link {
-  margin-top: 10px;
-  font-weight: bold;
-  color: #FF0000;
+  flex: 1;
 }
 
 .youtube-link a {
+  color: #e91e63;
   text-decoration: none;
-  color: #FF0000;
 }
 
 .youtube-link a:hover {
   text-decoration: underline;
 }
 
-.social-links p {
-  margin-top: 8px;
-  font-weight: bold;
+/* ---------- Video Sections ---------- */
+#latest-video .video,
+#latest-short .video,
+#teaser-video .video {
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.social-links a {
-  text-decoration: none;
-  color: #000;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+/* ---------- Shorts Visueel Accent ---------- */
+#latest-short {
+  background-color: #f9f9f9; /* lichte achtergrond */
+  padding: 15px;
+  border-radius: 10px;
 }
 
-.social-links a:hover {
-  text-decoration: underline;
+#latest-short .video {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-/* ===============================
-   Sections
-   =============================== */
-section {
-  padding: 50px 20px;
-  max-width: 900px;
-  margin: 0 auto;
+/* ---------- Contact Section ---------- */
+#contact {
+  margin: 50px 0;
+  text-align: center;
 }
 
-h2 {
-  color: #222;
-  margin-bottom: 20px;
-}
-
-/* Links */
-a {
+.contact-link a {
   color: #0077cc;
   text-decoration: none;
 }
 
-/* ===============================
-   Footer
-   =============================== */
+.contact-link a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
 footer {
   text-align: center;
-  padding: 20px;
-  background: #222;
-  color: #fff;
+  padding: 20px 0;
+  background-color: #f2f2f2;
+  border-top: 2px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-/* ===============================
-   Video styling
-   =============================== */
-.video {
-  margin-bottom: 30px;
-}
-
-/* ===============================
-   Contact links styling
-   =============================== */
-#contact .contact-link {
-  font-size: 0.9em;
-  margin-bottom: 10px;
-}
-
-#contact .contact-link a {
-  color: #0077cc;
-  text-decoration: underline;
-}
-
-#contact .contact-link a:hover {
-  color: #004a99;
-}
-
-/* ===============================
-   Mobiel / Responsive
-   =============================== */
-@media (max-width: 600px) {
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
   .about-container {
-    flex-direction: column; /* foto boven tekst */
+    flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .profile-photo {
-    width: 120px;
-    height: 120px;
-    object-position: center center; /* hoofd ook op mobiel gecentreerd */
+    max-width: 150px;
   }
 }
