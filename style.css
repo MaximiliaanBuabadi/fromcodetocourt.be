@@ -1,4 +1,4 @@
-/* ---------- Algemene Reset ---------- */
+/* ---------- RESET ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,111 +6,157 @@
   font-family: Arial, sans-serif;
 }
 
-/* ---------- Body ---------- */
+/* ---------- BODY ---------- */
 body {
   line-height: 1.6;
-  background-color: #ffffff;
-  color: #333333;
-  padding: 0 20px;
+  background-color: #0d0d0d;
+  color: #f5f5f5;
+  padding: 0 15px;
 }
 
-/* ---------- Header met België + Congo kleuren verweven ---------- */
-header {
+/* ---------- HERO ---------- */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 30px 0;
+  padding: 0 15px;
 
-  /* Gradient met België + Congo kleuren */
-  background: linear-gradient(
-    90deg,
-    /* België */
-    #ff0000 0%,   /* rood */
-    #000000 16%,  /* zwart */
-    #ffdd00 33%,  /* geel */
-    /* Congo */
-    #0033a0 50%,  /* blauw */
-    #d21034 66%,  /* rood */
-    #fcd116 100%  /* geel */
-  );
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+              url('tennis-bg.jpg');
 
+  background-size: cover;
+  background-position: center;
   color: white;
-  border-bottom: 2px solid #333333;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 5px;
+.hero h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-header p {
+.hero p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+/* ---------- BUTTONS ---------- */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
   font-size: 1rem;
-  color: #f0f8ff;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s ease;
 }
 
-/* ---------- About Section ---------- */
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* ---------- SECTIONS ---------- */
+section {
+  margin: 30px auto;
+  max-width: 900px;
+}
+
+/* ---------- TITELS ---------- */
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* ---------- ABOUT ---------- */
 #about {
-  margin: 40px 0;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .about-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
 .profile-photo {
-  max-width: 200px;
+  max-width: 150px;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 3px solid #444;
 }
 
-.about-text {
-  flex: 1;
+.about-text p {
+  font-size: 0.92rem;
+  margin-bottom: 8px;
 }
 
-.youtube-link a {
-  color: #e91e63;
-  text-decoration: none;
-}
-
-.youtube-link a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Video Sections ---------- */
-#latest-video .video,
-#latest-short .video,
-#teaser-video .video {
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-/* ---------- Shorts Visueel Accent ---------- */
-#latest-short {
-  background-color: #f9f9f9;
-  padding: 15px;
+/* ---------- WORK WITH ME ---------- */
+#brands {
+  background-color: #111;
+  padding: 20px;
   border-radius: 10px;
+  text-align: center;
 }
 
-#latest-short .video {
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+.brands-text {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-#latest-short .video:hover {
-  transform: scale(1.02);
+.brands-text p {
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+  color: #ccc;
 }
 
-/* ---------- Contact Section ---------- */
+/* ---------- VIDEO ---------- */
+.video {
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video iframe {
+  width: 100%;
+  height: 200px;
+}
+
+/* ---------- CONTACT ---------- */
 #contact {
-  margin: 50px 0;
+  margin: 30px 0;
   text-align: center;
 }
 
 .contact-link a {
-  color: #0077cc;
+  color: #4da6ff;
   text-decoration: none;
 }
 
@@ -118,24 +164,68 @@ header p {
   text-decoration: underline;
 }
 
-/* ---------- Footer ---------- */
+/* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #f2f2f2;
-  border-top: 2px solid #ddd;
-  font-size: 0.9rem;
-  color: #555;
+  background-color: #111;
+  border-top: 1px solid #333;
+  font-size: 0.85rem;
+  color: #aaa;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
+/* ---------- TABLET & DESKTOP ---------- */
+@media (min-width: 768px) {
+
+  body {
+    padding: 0 20px;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    width: auto;
+    padding: 12px 25px;
+  }
+
+  section {
+    margin: 60px auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
   .about-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .profile-photo {
-    max-width: 150px;
+    max-width: 200px;
+  }
+
+  .about-text p,
+  .brands-text p {
+    font-size: 1rem;
+  }
+
+  .video iframe {
+    height: 315px;
   }
 }
